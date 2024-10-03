@@ -54,7 +54,7 @@ class Onbording extends StatelessWidget {
             MaterialButton(
                 color: Color(0xff26596e),
                 onPressed: () {
-                  Navigator.pushNamed(context, "homescreen");
+                  Navigator.pushNamed(context, "mianscreen");
                 },
                 child: Text(
                   "Explore Now!!!",
