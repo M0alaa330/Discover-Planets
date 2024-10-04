@@ -26,6 +26,7 @@ class PlanetDetails extends StatelessWidget {
                 width: double.infinity,
                 height: 300,
                 decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15),
                     image: DecorationImage(
                         image: AssetImage(image!), fit: BoxFit.fill)),
               ),
@@ -63,13 +64,16 @@ class PlanetDetails extends StatelessWidget {
                 SizedBox(
                   height: 5,
                 ),
-                Text(
-                  desc!,
-                  style: textstyle(
-                      fontSize: 20,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold),
-                  maxLines: 10,
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                  child: Text(
+                    desc!,
+                    style: textstyle(
+                        fontSize: 15,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold),
+                    maxLines: 100,
+                  ),
                 )
               ],
             ),
