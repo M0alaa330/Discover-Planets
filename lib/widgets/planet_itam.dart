@@ -10,7 +10,7 @@ class PlanetItam extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.pushNamed(context, "planetdetails", arguments: {});
+        Navigator.pushNamed(context, "planetdetails", arguments: p1.id);
       },
       child: Padding(
         padding: const EdgeInsets.only(left: 15, right: 15, top: 15),

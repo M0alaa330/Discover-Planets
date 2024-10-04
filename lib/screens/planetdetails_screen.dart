@@ -1,3 +1,5 @@
+import 'package:discover_planets/models/planetdetails.dart';
+import 'package:discover_planets/widgets/planet_details.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -6,49 +8,15 @@ class PlanetdetailsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    String id = ModalRoute.of(context)!.settings.arguments as String;
+    PlanetDetail planetdetail = planetdetails.firstWhere((value) {
+      return value.planetid == id;
+    });
     return Scaffold(
-      body: Container(
-        height: double.infinity,
-        width: double.infinity,
-        decoration: BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage("assets/images/background.jpg"),
-                fit: BoxFit.fill)),
-        child: Column(
-          children: [
-            Stack(
-              alignment: Alignment.topLeft,
-              children: [
-                Container(
-                  width: double.infinity,
-                  height: 300,
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage("assets/images/ onboarding.jpg"),
-                          fit: BoxFit.fill)),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 40, left: 20),
-                  child: Container(
-                    decoration: BoxDecoration(
-                        color: Colors.black26,
-                        borderRadius: BorderRadius.circular(10)),
-                    child: IconButton(
-                        onPressed: () {
-                          Navigator.pop(context);
-                        },
-                        icon: Icon(
-                          Icons.arrow_back,
-                          color: Colors.white,
-                          size: 30,
-                        )),
-                  ),
-                )
-              ],
-            )
-          ],
-        ),
-      ),
-    );
+        body: PlanetDetails(
+      image: planetdetail.imageurl,
+      desc: planetdetail.details,
+      name: planetdetail.name,
+    ));
   }
 }
