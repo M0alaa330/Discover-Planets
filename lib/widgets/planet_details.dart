@@ -24,7 +24,7 @@ class PlanetDetails extends StatelessWidget {
             children: [
               Container(
                 width: double.infinity,
-                height: 300,
+                height: 250,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
                     image: DecorationImage(
