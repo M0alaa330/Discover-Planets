@@ -34,7 +34,7 @@ class Onbording extends StatelessWidget {
             Text(
               "Discover new planets,understand their secrets.",
               style: fontStyle(
-                  fontSize: 15,
+                  fontSize: 14,
                   color: Colors.black,
                   fontWeight: FontWeight.bold),
             ),
@@ -44,9 +44,9 @@ class Onbording extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
-                "Our application lets you explore exoplanets ,learn about their conditions,and even see if life could exist on these distant worlds.",
+                "Our application lets you explore exoplanets,learn about their conditions,and even see if life could exist on these distant worlds.",
                 style: textstyle(
-                    fontSize: 15,
+                    fontSize: 14,
                     color: Colors.black,
                     fontWeight: FontWeight.bold),
               ),

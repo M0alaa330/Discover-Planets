@@ -17,7 +17,7 @@ class HomeScreen extends StatelessWidget {
                 image: AssetImage("assets/images/background.jpg"),
                 fit: BoxFit.fill)),
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 50),
+          padding: const EdgeInsets.only(top: 50),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
